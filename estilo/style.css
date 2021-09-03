@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* configuração global */
+* {
+    height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #3E606F, #D1DBBD 103%);
+  background-attachment: fixed;
+}
