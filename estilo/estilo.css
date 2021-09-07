@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* configuração global */
+* {
+    height: 100%;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #3E606F, #D1DBBD 103%);
+  background-attachment: fixed;
+}
+
+#descricao {
+  position: absolute;
+  background-color: rgba(13, 59, 64, 59%);
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  left: 20%;
+  top: 20%;
+}
+
+#telalogin{
+  position: absolute;
+  background-color: #fff;
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  left: 50%;
+  top: 20%;
+  mix-blend-mode: soft-light;
+}
