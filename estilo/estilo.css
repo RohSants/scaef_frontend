@@ -120,6 +120,15 @@ p{
   height: 20px;
 }
 
+#telalogin #campologin > form > input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+#telalogin #campologin > form > input {
+  padding-left: 15px;
+}
+
 #telalogin #campologin > form > #senhalogin{
   margin-top: 20px;
 }
@@ -179,10 +188,6 @@ img#sus{ /*tamanho da logo sus*/
   border-width: 0px;
   border-radius: 21px;
   padding-left: 3px;
-}
-
-.formatologin:active{
-  border: none;
 }
 
 .formatoconteiner{ /*tamanho dos contêiners*/
