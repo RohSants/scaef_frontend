@@ -9,7 +9,7 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "Scaef",
-            "database": "scaef_bd",
+            "database": "scaef_bd.sql",
             "username": "roh",
             "password": "password"
         }
