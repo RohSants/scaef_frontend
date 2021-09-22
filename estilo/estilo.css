@@ -8,6 +8,10 @@
   margin: 0;
 }
 
+input:focus::placeholder {
+  color: transparent;
+}
+
 body { /* configuração de cor de fundo do site*/
   background-image: linear-gradient(to bottom, #3E606F, #D1DBBD);
   background-attachment: fixed;
@@ -111,7 +115,25 @@ p{
   display: flex;
   width: 320px;
   height: 240px;
-  margin: 8px 40px 10px 40px;
+  margin: 8px 40px 0px 40px;
+
+}
+
+#telalogin #campologin #formatologin {
+  width: 320px;
+  height: 35px;
+  margin-top: 23px;
+  border-radius: 21px;
+}
+
+#telalogin #campologin #formatologin:nth-last-child(2) {
+  width: 278px;
+  margin-right: 10px;
+}
+
+#telalogin #campologin form input:focus {
+  border-color: #D1DBBD40;
+  box-shadow: 0 0 0 0.25rem #2f313138;
 }
 
 #telalogin #campologin > form > p {
@@ -120,17 +142,21 @@ p{
   height: 20px;
 }
 
-#telalogin #campologin > form > input:focus {
-  box-shadow: 0 0 0 0;
-  outline: 0;
+#camposenha{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-#telalogin #campologin > form > input {
-  padding-left: 15px;
+#telalogin #campologin #senhalogin{
+  margin-top: 26px;
+  margin-bottom: 0px;
 }
 
-#telalogin #campologin > form > #senhalogin{
-  margin-top: 20px;
+#telalogin #campologin #botaologin {
+  margin-top: 24px;
+  height: 33px;
+  background-color: transparent;
+  border: none;
 }
 
 #telalogin #footerlogin {
@@ -161,12 +187,11 @@ p{
 #telalogin #footerlogin > div > a:nth-child(2){
   padding-left: 20px;
   border-left: var(--cor-fonte) solid 1.3px;
-  
 }
 
   /*id's das tags da footer*/
    
-img#sus{ /*tamanho da logo sus*/
+#footerbody img#sus{ /*tamanho da logo sus*/
   width: 135px;
   height: 60px;
   padding-left: 10px;
@@ -174,21 +199,6 @@ img#sus{ /*tamanho da logo sus*/
   }
   
   /*Classes da tag section*/
-
-.tamanhologin{
-  width: 320px;
-  height: 20px;
-  margin-top: 10px;
-}
-
-.formatologin {
-  width: 320px;
-  height: 35px;
-  margin-top: 10px;
-  border-width: 0px;
-  border-radius: 21px;
-  padding-left: 3px;
-}
 
 .formatoconteiner{ /*tamanho dos contêiners*/
   margin-bottom: 50px;
