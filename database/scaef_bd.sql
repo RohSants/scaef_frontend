@@ -1,7 +1,7 @@
 create table medicamento(
-	codigo int not null,
+	codigo int not null primary key,
     nome varchar(95) not null,
-    cid varchar(5) primary key,
+    cid varchar(5),
     mg int null,
     ml int null
 );

@@ -9,9 +9,12 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "Scaef",
-            "database": "scaef_bd.sql",
+            "database": "scaef_bd",
             "username": "roh",
             "password": "password"
         }
+    ],
+    "java.project.sourcePaths": [
+        "scaef\\src\\main\\java\\com\\sistemacadastral\\scaef\\entity"
     ]
 }
