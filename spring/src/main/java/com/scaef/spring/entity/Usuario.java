@@ -7,22 +7,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Medicamento{
- 
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codigo;
- 
-    @Column(nullable = false, unique = true)
-    private String nome;
- 
-    @Column(nullable = false)
-    private String cid;
- 
-    @Column(nullable = true)
-    private int mg;
- 
-    @Column(nullable = true)
-    private int ml;
+
+    @Column()
+    private String Nome;
+
+    @Column()
+    private int Cpf;
+
+    @Column()
+    private int Rg;
+    
+    @Column()
+    private int Cns;
+
+    @Column()
+    private S
+
     
 }

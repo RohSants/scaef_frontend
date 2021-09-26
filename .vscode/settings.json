@@ -16,5 +16,6 @@
     ],
     "java.project.sourcePaths": [
         "scaef\\src\\main\\java\\com\\sistemacadastral\\scaef\\entity"
-    ]
+    ],
+    "java.debug.settings.console": "internalConsole"
 }
