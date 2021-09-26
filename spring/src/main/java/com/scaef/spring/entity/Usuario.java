@@ -11,10 +11,10 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column()
+    @Column(nullable = false)
     private String Nome;
 
-    @Column()
+    @Column(nullable = false,unique = true)
     private int Cpf;
 
     @Column()
@@ -24,7 +24,7 @@ public class Usuario {
     private int Cns;
 
     @Column()
-    private S
+    private String email;
 
     
 }
