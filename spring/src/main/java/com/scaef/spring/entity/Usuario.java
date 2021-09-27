@@ -5,26 +5,39 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.*;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @Column(nullable = false)
-    private String Nome;
+    private String nome;
 
-    @Column(nullable = false,unique = true)
-    private int Cpf;
+    @Column(name = "CPF", nullable = false, unique = true)
+    private String cpf;
 
-    @Column()
-    private int Rg;
+    @Column(name = "RG", nullable = false, unique = true)
+    private String rg;
     
-    @Column()
-    private int Cns;
-
-    @Column()
+    @Column(nullable = true, unique = true)
     private String email;
 
-    
+    @Column(nullable = true)
+    private int celular;
+
+    @Column(name = "Fone Fixo", nullable = false)
+    private int fone;
+
+    @Column(name = "função", nullable = false)
+    private String funcao;
+
+    @Column(name = "CRF", nullable = false, unique = true)
+    private int crf;
 }

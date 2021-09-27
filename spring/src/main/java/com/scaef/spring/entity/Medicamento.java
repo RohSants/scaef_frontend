@@ -5,8 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import lombok.*;
 
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Medicamento{
  
     @Id
@@ -24,5 +29,4 @@ public class Medicamento{
  
     @Column(nullable = true)
     private int ml;
-    
 }

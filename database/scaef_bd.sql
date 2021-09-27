@@ -9,31 +9,34 @@ create table medicamento(
 create table paciente (
 	id int primary key,
     nome varchar(95) not null,
-    CNS int Not Null,
-    CPF int Not Null,
+    cns varchar(15) Not Null,
+    cpf varchar(11) Not Null,
     dataNasc date Not Null,
     email varchar(100) Not Null,
-    municipio varchar(26) Not Null,
-    endereco varchar(100) Not Null,
-    complemento varchar(50) Null,
-    CEP int Not Null,
+    mun varchar(26) Not Null,
+    endr varchar(100) Not Null,
+    comp varchar(50) Null,
+    cep int Not Null,
     num int Not Null,
     tel int Null,
     fone int Null,
-    Unique(CPF)
+    Unique(nome),
+    Unique(cns),
+    Unique(cpf),
+    Unique(email)
 );
 
 create table usuarios(
-	Nome varchar(95) Not NULL,
-    CPF int Not NULL,
-    RG int Not NULL,
-    CNS int primary key,
-    Email varchar(100) NULL,
-    Celular int NULL,
-    Fone int NULL,
-    Funcao varchar(14) Not NULL,
-    CRF int NULL,
-    Unique(CPF),
-    Unique(RG),
-    Unique(CRF)
+	nome varchar(95) Not NULL,
+    cpf varchar(9) Not NULL,
+    rg varchar(11) Not NULL,
+    email varchar(100) NULL,
+    celular int NULL,
+    fone int NULL,
+    funcao varchar(14) Not NULL,
+    crf int NULL,
+    Unique(cpf),
+    Unique(rg),
+    Unique(crf),
+    Unique(email)
 );
