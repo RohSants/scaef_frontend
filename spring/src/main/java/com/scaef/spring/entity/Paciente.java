@@ -1,11 +1,15 @@
 package com.scaef.spring.entity;
 
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import lombok.*;
+import lombok.Data;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 @Entity
 @Data
@@ -27,7 +31,7 @@ public class Paciente {
     private String cpf;
     
     @Column(name = "d. nascimento", nullable = false)
-    private String dNasc;
+    private Date dNasc;
     
     @Column(name = "email", nullable = false)
     private String email;
