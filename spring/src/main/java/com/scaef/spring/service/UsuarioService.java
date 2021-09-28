@@ -14,4 +14,5 @@ public class UsuarioService {
     @Autowired
 	public UsuarioService(UsuarioRepository usuarioRepository){
 		this.usuarioRepository  = usuarioRepository;
+    }
 }

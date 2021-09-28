@@ -49,5 +49,4 @@ public class UsuarioDTO {
     @Valid
     @NotNull
     private UsuarioDTO usuarioDTO;
-    
 }
