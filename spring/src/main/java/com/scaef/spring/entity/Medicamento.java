@@ -19,17 +19,34 @@ public class Medicamento{
  
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int codigo;
+    @Column(name = "ID_Medicamento")
+    private int id;
  
-    @Column(nullable = false, unique = true)
+    @Column(name = "Nome", nullable = false, unique = true)
     private String nome;
  
-    @Column(nullable = false)
+    @Column(name = "CID", nullable = false)
     private String cid;
- 
-    @Column(nullable = true)
-    private int mg;
- 
-    @Column(nullable = true)
-    private int ml;
+
+    @Column(name = "Categoria Regulatória",nullable = true)
+    private String catReg;
+
+    @Column(name = "PCDT",nullable = true)
+    private String pcdt;
+
+    @Column(name = "Dosagem",nullable = true)
+    private String dose;
+
+    @Column(name = "Forma Farmacêutica",nullable = true)
+    private String forma;
+
+    @Column(name = "Via de Administração", nullable = true)
+    private String via;
+
+    @Column(name = "Princípio Ativo", nullable = true)
+    private String priA;
+
+    @Column(name = "Classe Terapêutica", nullable = true)
+    private String classeT;
+
 }

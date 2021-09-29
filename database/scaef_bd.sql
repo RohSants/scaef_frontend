@@ -1,5 +1,5 @@
 create table medicamento(
-	codigo int not null primary key,
+    codigo int not null primary key,
     nome varchar(95) not null,
     cid varchar(5),
     mg int null,
@@ -30,7 +30,7 @@ create table usuarios(
 	nome varchar(95) Not NULL,
     cpf varchar(9) Not NULL,
     rg varchar(11) Not NULL,
-    email varchar(100) NULL,
+    email varchar(95) NULL,
     celular int NULL,
     fone int NULL,
     funcao varchar(14) Not NULL,

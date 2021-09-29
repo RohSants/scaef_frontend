@@ -2,6 +2,9 @@ package com.scaef.spring.dto;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.github.javafaker.IdNumber;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;

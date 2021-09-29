@@ -17,8 +17,10 @@ import lombok.AllArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Paciente {
+
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_Paciente")
     private int id;
 
     @Column(nullable = false, unique = true)
@@ -30,28 +32,28 @@ public class Paciente {
     @Column(name = "CPF", nullable = false, unique = true)
     private String cpf;
     
-    @Column(name = "d. nascimento", nullable = false)
+    @Column(name = "Nascimento", nullable = false)
     private Date dNasc;
     
-    @Column(name = "email", nullable = false)
+    @Column(name = "Email", nullable = false)
     private String email;
     
-    @Column(name = "município", nullable = false)
+    @Column(name = "Município", nullable = false)
     private String mun;
     
-    @Column(name = "endereço", nullable = false)
+    @Column(name = "Endereço", nullable = false)
     private String endr;
     
-    @Column(name = "complemento", nullable = false)
+    @Column(name = "Complemento", nullable = false)
     private String comp;
     
     @Column(name = "CEP", nullable = false)
     private int cep;
     
-    @Column(nullable = false)
+    @Column(name = "Número R.", nullable = false)
     private int num;
     
-    @Column(nullable = false)
+    @Column(name = "Celular", nullable = false)
     private int celular;
     
     @Column(name = "Fone Fixo", nullable = false)

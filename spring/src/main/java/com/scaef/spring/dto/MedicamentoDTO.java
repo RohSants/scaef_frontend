@@ -16,23 +16,45 @@ import lombok.AllArgsConstructor;
 
 public class MedicamentoDTO {
 
+    @NotNull
+    private int id;
+
     @NotBlank
     @Size(max = 95)
     private String nome;
-
-    @NotNull
-    private int codigo;
-
-    @NotNull
-    private int mg;
-
-    @NotNull
-    private int ml;
 
     @NotBlank
     @Size(max = 5)
     private String cid;
 
+    @NotBlank
+    @Size(max = 90)
+    private String catReg;
+
+    @NotBlank
+    @Size(max = 50)
+    private String pcdt;
+
+    @NotBlank
+    @Size(max = 15)
+    private String dose;
+
+    @NotNull
+    @Size(max = 25)
+    private String forma;
+
+    @NotBlank
+    @Size(max = 11)
+    private String via;
+
+    @NotBlank
+    @Size(max = 50)
+    private String priA;
+
+    @NotBlank
+    @Size(max = 50)
+    private String classeT;
+    
     @Valid
     @NotNull
     private MedicamentoDTO medicamentoDTO;

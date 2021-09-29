@@ -4,11 +4,11 @@ import com.scaef.spring.dto.MessageResponseDTO;
 import com.scaef.spring.dto.UsuarioDTO;
 import com.scaef.spring.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import javax.validation.Valid;
 
 
 @RestController
@@ -23,7 +23,7 @@ public class UsuarioController {
     }
     
     @PostMapping
-        public MessageResponseDTO create(@ResquestBody @Validated UsuarioDTO usuarioDTO){
+        public MessageResponseDTO create(@RequestBody @Valid UsuarioDTO usuarioDTO){
         return usuarioService.create(usuarioDTO);
     }
 }

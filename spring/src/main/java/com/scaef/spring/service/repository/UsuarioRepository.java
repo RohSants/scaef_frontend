@@ -1,4 +1,4 @@
-package com.scaef.spring.repository;
+package com.scaef.spring.service.repository;
 
 import com.scaef.spring.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -18,9 +18,10 @@ import lombok.AllArgsConstructor;
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_Usuario")
     private int id;
 
-    @Column(nullable = false)
+    @Column(name = "Nome", nullable = false)
     private String nome;
 
     @Column(name = "CPF", nullable = false, unique = true)
@@ -29,16 +30,16 @@ public class Usuario {
     @Column(name = "RG", nullable = false, unique = true)
     private String rg;
     
-    @Column(nullable = true, unique = true)
+    @Column(name = "Email", nullable = true, unique = true)
     private String email;
 
-    @Column(nullable = true)
+    @Column(name = "Celular", nullable = true)
     private int celular;
 
     @Column(name = "Fone Fixo", nullable = false)
     private int fone;
 
-    @Column(name = "função", nullable = false)
+    @Column(name = "Função", nullable = false)
     private String funcao;
 
     @Column(name = "CRF", nullable = false, unique = true)
