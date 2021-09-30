@@ -20,25 +20,25 @@ public class MedicamentoUtils {
                 .catReg(faker.medical().medicineName())
                 .pcdt(faker.medical().symptoms())
                 .dose(faker.numerify("##mg"))
-                .forma(faker.name().toString())
+                .forma(faker.name().firstName())
                 .via(faker.name().firstName())
-                .priA(faker.medical().toString())
-                .classeT(faker.medical().toString())
+                .priA(faker.medical().medicineName())
+                .classeT(faker.medical().symptoms())
                 .build();
     }
 
     public static Medicamento createFakeMedicamento() {
         return Medicamento.builder()
                 .id(faker.number().numberBetween(0, 100))
-                .nome(faker.numerify("M0##"))
-                .cid(faker.medical().diseaseName())
+                .nome(faker.medical().medicineName())
+                .cid(faker.numerify("M0###"))
                 .catReg(faker.medical().medicineName())
                 .pcdt(faker.medical().symptoms())
                 .dose(faker.numerify("##mg"))
-                .forma(faker.name().toString())
-                .via(faker.name().name())
-                .priA(faker.medical().toString())
-                .classeT(faker.medical().toString())
+                .forma(faker.name().firstName())
+                .via(faker.name().firstName())
+                .priA(faker.medical().medicineName())
+                .classeT(faker.medical().symptoms())
                 .build();
     }
 

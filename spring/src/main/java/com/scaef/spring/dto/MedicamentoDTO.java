@@ -1,6 +1,5 @@
 package com.scaef.spring.dto;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -54,8 +53,4 @@ public class MedicamentoDTO {
     @NotBlank
     @Size(max = 50)
     private String classeT;
-    
-    @Valid
-    @NotNull
-    private MedicamentoDTO medicamentoDTO;
 }

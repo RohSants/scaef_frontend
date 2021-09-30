@@ -28,25 +28,25 @@ public class Medicamento{
     @Column(name = "CID", nullable = false)
     private String cid;
 
-    @Column(name = "Categoria Regulatória",nullable = true)
+    @Column(name = "Categoria Regulatória", nullable = false)
     private String catReg;
 
-    @Column(name = "PCDT",nullable = true)
+    @Column(name = "PCDT", nullable = false)
     private String pcdt;
 
-    @Column(name = "Dosagem",nullable = true)
+    @Column(name = "Dosagem", nullable = false)
     private String dose;
 
-    @Column(name = "Forma Farmacêutica",nullable = true)
+    @Column(name = "Forma Farmacêutica", nullable = false)
     private String forma;
 
-    @Column(name = "Via de Administração", nullable = true)
+    @Column(name = "Via de Administração", nullable = false)
     private String via;
 
-    @Column(name = "Princípio Ativo", nullable = true)
+    @Column(name = "Princípio Ativo", nullable = false)
     private String priA;
 
-    @Column(name = "Classe Terapêutica", nullable = true)
+    @Column(name = "Classe Terapêutica", nullable = false)
     private String classeT;
 
 }

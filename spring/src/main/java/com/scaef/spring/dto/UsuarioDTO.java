@@ -2,7 +2,6 @@ package com.scaef.spring.dto;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.Builder;
@@ -46,7 +45,4 @@ public class UsuarioDTO {
     @NotNull
     private int crf;
     
-    @Valid
-    @NotNull
-    private UsuarioDTO usuarioDTO;
 }

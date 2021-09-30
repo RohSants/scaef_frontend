@@ -2,8 +2,6 @@ package com.scaef.spring.dto;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-
-import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 import lombok.Data;
@@ -61,8 +59,4 @@ public class PacienteDTO {
     
     @NotNull
     private int fone;
-
-    @Valid
-    @NotNull
-    private PacienteDTO pacienteDTO;
 }
