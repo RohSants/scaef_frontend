@@ -1,0 +1,21 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Scaef",
+            "database": "scaef_bd",
+            "username": "roh",
+            "password": "password"
+        }
+    ],
+    "java.project.sourcePaths": [
+        "scaef\\src\\main\\java\\com\\sistemacadastral\\scaef\\entity"
+    ],
+    "java.debug.settings.console": "internalConsole"
+}
