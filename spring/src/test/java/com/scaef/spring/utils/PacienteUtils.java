@@ -14,18 +14,53 @@ public class PacienteUtils {
 
     public static PacienteDTO createFakePacienteDTO() {
         return PacienteDTO.builder()
-            .id(faker.number().randomNumber())
-            .nome((faker.name())
-            .cpf(faker.number())
+            .id(faker.number().randomDigit())
+            .nome(faker.name().firstName())
+            .cns(faker.numerify("###############"))
+            .cpf(faker.numerify("###########"))
             .dNasc(faker.date().birthday())
-            .email(faker.address())
-            .mun(faker.name())
-            .endr(faker.name()) 
-            .comp(faker.name())
-            /*.cep()
-            .num()
-            .celular()
-            .fone()*/
+            .email(faker.name().firstName())
+            .mun(faker.name().firstName())
+            .endr(faker.name().firstName()) 
+            .comp(faker.name().firstName())
+            .cep(faker.number().randomDigit())
+            .num(faker.number().randomDigit())
+            .celular(faker.number().randomDigit())
+            .fone(faker.number().randomDigit())
+            .build();
+    }
+
+    public static Paciente createFakePaciente() {
+        return Paciente.builder()
+            .id(faker.number().randomDigit())
+            .nome(faker.name().firstName())
+            .cpf(faker.numerify("###########"))
+            .dNasc(faker.date().birthday())
+            .email(faker.name().firstName())
+            .mun(faker.name().firstName())
+            .endr(faker.name().firstName()) 
+            .comp(faker.name().firstName())
+            .cep(faker.number().randomDigit())
+            .num(faker.number().randomDigit())
+            .celular(faker.number().randomDigit())
+            .fone(faker.number().randomDigit())
+            .build();
+    }
+
+    public static Paciente createFakePacienteFrom (PacienteDTO pacienteDTO){
+        return Paciente.builder()
+            .id(pacienteDTO.getId())
+            .nome(pacienteDTO.getNome())
+            .cpf(pacienteDTO.getCpf())
+            .dNasc(pacienteDTO.getDNasc())
+            .email(pacienteDTO.getEmail())
+            .mun(pacienteDTO.getMun())
+            .endr(pacienteDTO.getEndr()) 
+            .comp(pacienteDTO.getComp())
+            .cep(pacienteDTO.getCep())
+            .num(pacienteDTO.getNum())
+            .celular(pacienteDTO.getCelular())
+            .fone(pacienteDTO.getFone())
             .build();
     }
 

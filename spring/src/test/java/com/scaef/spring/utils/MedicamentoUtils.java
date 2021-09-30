@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.github.javafaker.Faker;
 import com.scaef.spring.dto.MedicamentoDTO;
+import com.scaef.spring.entity.Medicamento;
 
 public class MedicamentoUtils {
     
@@ -13,16 +14,46 @@ public class MedicamentoUtils {
 
     public static MedicamentoDTO createFakeMedicamentoDTO() {
         return MedicamentoDTO.builder()
-                .id(faker.idNumber())
-                .nome(faker.name())
-                .cid(faker.number().randomNumber())
-                .catReg(faker.name())
-                .pcdt(faker.name())
-                .dose(faker.name())
-                .forma(faker.name())
-                .via(faker.name())
-                .priA(faker.name())
-                .classeT(faker.name())
+                .id(faker.number().numberBetween(0, 100))
+                .nome(faker.medical().medicineName())
+                .cid(faker.numerify("M0###"))
+                .catReg(faker.medical().medicineName())
+                .pcdt(faker.medical().symptoms())
+                .dose(faker.numerify("##mg"))
+                .forma(faker.name().toString())
+                .via(faker.name().firstName())
+                .priA(faker.medical().toString())
+                .classeT(faker.medical().toString())
+                .build();
+    }
+
+    public static Medicamento createFakeMedicamento() {
+        return Medicamento.builder()
+                .id(faker.number().numberBetween(0, 100))
+                .nome(faker.numerify("M0##"))
+                .cid(faker.medical().diseaseName())
+                .catReg(faker.medical().medicineName())
+                .pcdt(faker.medical().symptoms())
+                .dose(faker.numerify("##mg"))
+                .forma(faker.name().toString())
+                .via(faker.name().name())
+                .priA(faker.medical().toString())
+                .classeT(faker.medical().toString())
+                .build();
+    }
+
+    public static Medicamento createFakeMedicamentoFrom(MedicamentoDTO medicamentoDTO) {
+        return Medicamento.builder()
+                .id(medicamentoDTO.getId())
+                .nome(medicamentoDTO.getNome())
+                .cid(medicamentoDTO.getCid())
+                .catReg(medicamentoDTO.getCatReg())
+                .pcdt(medicamentoDTO.getPcdt())
+                .dose(medicamentoDTO.getDose())
+                .forma(medicamentoDTO.getForma())
+                .via(medicamentoDTO.getVia())
+                .priA(medicamentoDTO.getPriA())
+                .classeT(medicamentoDTO.getClasseT())
                 .build();
     }
 
@@ -37,4 +68,6 @@ public class MedicamentoUtils {
         } catch (Exception e) {
             throw new RuntimeException(e);
     }
+}
+
 }

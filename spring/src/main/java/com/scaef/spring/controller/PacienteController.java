@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/Paciente")
+@RequestMapping("/api/v1/Paciente/")
 public class PacienteController {
     private PacienteService pacienteService;
 

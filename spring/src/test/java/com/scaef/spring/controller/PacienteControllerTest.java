@@ -1,11 +1,5 @@
 package com.scaef.spring.controller;
 
-import static com.scaef.spring.utils.PacienteUtils.asJsonString;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 import com.scaef.spring.dto.MessageResponseDTO;
 import com.scaef.spring.dto.PacienteDTO;
 import com.scaef.spring.service.PacienteService;
@@ -24,10 +18,16 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import org.springframework.http.MediaType;
 
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static com.scaef.spring.utils.PacienteUtils.asJsonString;
+
 @ExtendWith(MockitoExtension.class)
 public class PacienteControllerTest{
 
-    public static final String PACIENTE_API_URL_PATH = "/api/v1/Paciente";
+    public static final String PACIENTE_API_URL_PATH = "/api/v1/Paciente/";
     private MockMvc mockMvc;
 
     @Mock

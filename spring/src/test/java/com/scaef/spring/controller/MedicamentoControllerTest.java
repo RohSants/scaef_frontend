@@ -4,14 +4,12 @@ import com.scaef.spring.service.MedicamentoService;
 import com.scaef.spring.utils.MedicamentoUtils;
 import com.scaef.spring.dto.MedicamentoDTO;
 import com.scaef.spring.dto.MessageResponseDTO;
-
 import org.springframework.http.MediaType;
 import org.hamcrest.core.Is;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
-
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
@@ -23,18 +21,13 @@ import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.
-MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static com.scaef.spring.utils.MedicamentoUtils.asJsonString;
-/*import static com.scaef.spring.utils.MedicamentoUtils.createFakeMedicamentoDTO;*/
-
-
 
 @ExtendWith(MockitoExtension.class)
 public class MedicamentoControllerTest {
 
-    private static final String MEDICAMENTO_API_URL_PATH = "/api/v1/Medicamento";
-    
+    private static final String MEDICAMENTO_API_URL_PATH = "/api/v1/Medicamento/";
     private MockMvc mockMvc;
 
     @Mock
@@ -66,5 +59,5 @@ public class MedicamentoControllerTest {
         .content(asJsonString(medicamentoDTO)))
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.message", Is.is(expectedMessageResponse.getMessage())));
-        }   
+    }
 }
