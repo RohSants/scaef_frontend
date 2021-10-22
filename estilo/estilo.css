@@ -3,6 +3,7 @@
 :root{
   --cor-fonte: #112e42cc;
 }
+
 * { /* configuração global*/
   height: 100%;
   margin: 0;
@@ -13,7 +14,7 @@ input:focus::placeholder {
 }
 
 body { /* configuração de cor de fundo do site*/
-  background-image: linear-gradient(to bottom, #3E606F, #D1DBBD);
+  background-image: linear-gradient(to bottom, #3E606F 15%, #D1DBBD);
   background-attachment: fixed;
 }
 
@@ -78,6 +79,7 @@ p{
   width: 80px;
   height: 80px;
   margin-right: 20px;
+  margin-left: 6px;
 }
 
 #descricao #personagens {
@@ -90,6 +92,7 @@ p{
 }
 
 #descricao #personagens #centro{
+  position: absolute;
   margin-top: 15px;
 }
 
@@ -143,7 +146,8 @@ p{
   height: 20px;
 }
 
-#camposenha{
+#telalogin #campologin #camposenha{
+  height: 60px;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -155,9 +159,14 @@ p{
 
 #telalogin #campologin #botaologin {
   margin-top: 24px;
-  height: 33px;
+  height: 32px;
   background-color: transparent;
   border: none;
+}
+
+#telalogin #campologin #botaologin #botaologinform {
+  width: 30px;
+  margin-left: -7px;
 }
 
 #telalogin #footerlogin {
@@ -174,7 +183,7 @@ p{
 }
 
 #telalogin #footerlogin > div > a {
-  margin: 0px 0px 50px 0px;
+  margin: -15px 0px 50px 0px;
   height: 30px;
   font-size: 1.2em;
   color: var(--cor-fonte);
@@ -217,15 +226,13 @@ p{
 }
 
 .tamanhosvg{ /*define um tamanho padrão para os vetores*/
-  position: absolute;
-  margin: auto;
   width: 135px;
   height: 135px;
 }
 
 .tamanhosvg:nth-child(1){
   position: absolute;
-  margin-left: -105px;
+  margin-left: -113px;
 }
 
 .tamanhosvg:nth-child(2){
