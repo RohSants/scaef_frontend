@@ -27,29 +27,37 @@ aside{
     border-left: var(--cor-fonte) solid 1.9px;
     }
 
- #footertemplate > p {
+ #footertemplate > p { /*configuração do ministerio da saúde*/
     font-size: 1.25em;
     width: 159px;
-    height: 300px;
     margin-left: -10px;
     }
 
- #footertemplate{
+ #footertemplate{ /* Posição da logo e do Ministerio da Saúde */
     display: flex;
     flex-flow: row nowrap;
-    align-items: flex-start;
     justify-content: center;
     position: absolute;
     width: 100%;
-    height: 100px;
+    height: 150px;
     bottom: 0;
     left: 0;
     }
 
-#usuario{
-    width: 135px;
-    height: 60px;
-    padding-left: 10px;
-    border-left: var(--cor-fonte) solid 1.9px;  
+#usuario{ /* Tamanho da logo do usuario */
+    width: 150px;
+    height: 140px;
+    padding:0;
+    margin: 50px 65px;
+    background-color:rgb(26, 26, 80);
+    border-radius: 50%;
+    
 
 }
+p{
+    height: 0px;
+    margin-top:35px;
+    font-size:17px;
+    margin-left:15px;
+}
+
