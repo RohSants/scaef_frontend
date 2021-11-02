@@ -1,54 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Inicial</title>
-    <link rel="stylesheet" href="estilo/estilo_telaprincipal.css">
+    <link rel="stylesheet" href="estilo/telainicial.css">
 </head>
 
-<body>
-    <header> <!--menu de navegação e logo-->
-        <nav>
-        </nav>
+<body class="app">
+    <header class="menu">
+        <section class="barramenu">
+            <a href = "#" target = "_self">
+                <figure class="menulogo">
+                    <img class="logoscaef" src="mídia/vetores/logo_scaef.svg" alt="logo do sistema">
+                    <figcaption id="menufonte">SCAEF</figcaption>
+                </figure>
+            </a>
+            <nav>
+                <ul id="menunav">
+                    <li>
+                        <a href = "#" target = "_self">Principal</a>
+                    </li>
+                    <li>
+                        <a href = "#" target = "_self">Pacientes</a>
+                    </li>
+                    <li>
+                        <a href = "#" target = "_self">Medicamentos</a>
+                    </li>
+                    <li>
+                        <a href = "#" target = "_self">Estoque</a>
+                    </li>
+                    <li>
+                        <a href = "#" target = "_self">Usuários</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <aside><!--Menu-->
 
-        <!--
-        <div class="acesso">
-        </div>
-        -->
+    <aside class="barra">
+        <section class="perfilacesso">
+            <p class="headerperfil">Seu último acesso: 11/11/1111</p>
+        </section>
         
-        <p>Seu último acesso: 11/11/1111 11:11 </p>
-        
-        <picture>
-            <img id="usuario" src="mídia/vetores/icone_1_principal.svg" alt="Logo do perfil do Usuário">
-        </picture>
-        
-        <!--
-        <div class="dadosAcesso">
-        </div>
-        -->
-        
-        <p>Nome: Mayra Rodrigues Carvalho</p>
-        <p>Função: Farmacêutica</p>
-        <p>CRF: 021548</p>
-        
+        <section class="perfildados">
+            <img class="fotouser" src="mídia/vetores/icone_1_principal.svg" alt="Logo do perfil do Usuário">
+            <section class = "dadosuser">
+                <p>Nome: Mayra Rodrigues Carvalho</p>
+                <p>Função: Farmacêutica</p>
+                <p>CRF: 021548</p>
+            </section>
+        </section>
 
-        <footer id="footertemplate">
-            <p>
-                Ministério da Saúde do Brasil
-             </p>
-             
-             <picture>
-                 <img id = "sus" src="mídia/imagens/logo_sus.png" alt="Logo  do Sistema Único de Saúde (SUS)">
-               </picture>
+        <footer class="perfilfooter">
+            <p>Ministério da Saúde do Brasil</p>
+            <img class = "imgsus" src="mídia/imagens/logo_sus.png" alt="Logo  do Sistema Único de Saúde (SUS)">
         </footer>
     </aside>
-
-    <main></main>
-
     
+    <main class="conteudo">cont</main>
+    <footer class="rodape">rodape</footer>
 </body>
+
 </html>

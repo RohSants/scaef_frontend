@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
 * { /* configuração global*/
-    height: 100%;
-    margin: 0;
-  }
+    margin: 10px;
+}
