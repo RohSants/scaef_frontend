@@ -3,3 +3,26 @@
 * { /* configuração global*/
     margin: 10px;
 }
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(54, 104, 104, 0.719);
+}
+
+.box{
+    position: absolute;
+    background-color: white;
+    border-radius:10px;
+}
+
+legend{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(130, 172, 228, 0.603);
+}
+
+input{
+    width: 100%;
+}
+
